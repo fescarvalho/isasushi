@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isa Sushi - Cardápio & Pedidos</title>
+    <style>
+        /* CONFIGURAÇÕES GERAIS */
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            background-color: #121212; /* Fundo preto */
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Evita rolagem lateral indesejada */
+        }
+
+        /* CABEÇALHO */
+        .header {
+            text-align: center;
+            padding: 30px 20px 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #ff0000; /* Vermelho Isa Sushi */
+            font-size: 3rem; /* Tamanho padrão */
+            margin: 0;
+            font-style: italic;
+            text-shadow: 2px 2px 4px #000;
+            line-height: 1.1;
+        }
+
+        .subtitle {
+            color: #ccc;
+            font-size: 1rem;
+            margin-top: 10px;
+            padding: 0 10px;
+        }
+
+        /* BOTÕES DE AÇÃO */
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0 30px;
+            width: 90%; /* Ocupa 90% da tela no celular */
+            max-width: 400px; /* Não fica gigante no PC */
+            align-items: center;
+        }
+
+        .btn {
+            padding: 18px 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-align: center;
+            width: 100%; /* Botão preenche a largura do container */
+            box-sizing: border-box;
+            transition: transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .btn:active {
+            transform: scale(0.98); /* Efeito de clique no celular */
+        }
+
+        /* Botão WhatsApp (Verde) */
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            border: none;
+        }
+
+        /* Botão Download (Borda Vermelha) */
+        .btn-download {
+            background-color: transparent;
+            border: 2px solid #ff0000;
+            color: #ff0000;
+        }
+
+        /* DESTAQUES (GRID RESPONSIVO) */
+        h2 {
+            text-align: center; 
+            color: #fff; 
+            font-weight: lighter; 
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+    
+        .destaques-container {
+            display: flex;
+            flex-wrap: wrap; /* Permite que os itens "quebrem" linha */
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            padding: 0 15px 30px; /* Padding lateral para celular */
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 15px;
+            width: 100%; /* No celular ocupa a largura total */
+            max-width: 320px; /* Trava a largura máxima */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            color: #ff0000;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #aaa;
+            margin-bottom: 10px;
+        }
+
+        .card-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* RODAPÉ */
+        .info {
+            background-color: #0a0a0a;
+            width: 100%;
+            padding: 30px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            color: #888;
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+
+        /* AJUSTES ESPECÍFICOS PARA TELAS PEQUENAS (MOBILE) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem; /* Título um pouco menor */
+            }
+            
+            .btn {
+                font-size: 1rem; /* Texto do botão ajustado */
+                padding: 16px;
+            }
+
+            .card {
+                max-width: 100%; /* Card ocupa toda a largura disponível */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Isa Sushi</h1>
+        <p class="subtitle">Culinária japonesa oriental</p>
+    </div>
+
+    <div class="action-buttons">
+        <a href="https://wa.me/5522998184401?text=Olá%20Isa%20Sushi,%20gostaria%20de%20fazer%20um%20pedido." class="btn btn-whatsapp" target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.669-.699c.968.552 1.83.845 2.781.845 3.182 0 5.768-2.587 5.768-5.767s-2.586-5.766-5.758-5.766zm9.027 13.911l-3.376 1.066c-1.636.921-3.66 1.488-5.656 1.488-6.079 0-11.026-4.947-11.026-11.026 0-6.078 4.947-11.026 11.026-11.026 6.078 0 11.026 4.948 11.026 11.026 0 3.268-1.455 6.22-3.81 8.216l1.816 6.256zm-11.023-20.083c-5.249 0-9.526 4.277-9.526 9.526 0 1.956.574 3.774 1.554 5.306l-1.048 3.84 3.928-1.029c1.517.915 3.288 1.455 5.092 1.455 5.249 0 9.526-4.277 9.526-9.526 0-5.249-4.277-9.526-9.526-9.526z"/></svg>
+            FAZER PEDIDO AGORA
+        </a>
+
+        <a href="cardapio.pdf" class="btn btn-download" download>
+            BAIXAR CARDÁPIO (PDF)
+        </a>
+    </div>
+
+    <h2>Nossos Destaques</h2>
+    
+    <div class="destaques-container">
+        
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?q=80&w=400&auto=format&fit=crop" alt="Combo Sushi">
+            <div class="card-content">
+                <div class="card-title">Combo W (30 Peças)</div>
+                <div class="card-desc">5 Sashimis, 10 Hots, 10 Uramakis, 5 Joys.</div>
+                <div class="card-price">R$ 84,90</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/1151189763/pt/foto/hot-roll-with-salmon-tempura-on-black-with-reflection.jpg?s=612x612&w=0&k=20&c=4mdQVZGS56MAXVgoLNxymGQbfA0sG9N7mbkrn9JT_rc=" alt="Hot Filadélfia">
+            <div class="card-content">
+                <div class="card-title">Hot Filadélfia</div>
+                <div class="card-desc">10 unidades crocantes.</div>
+                <div class="card-price">R$ 25,00</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=400&auto=format&fit=crop" alt="Temaki">
+            <div class="card-content">
+                <div class="card-title">Temaki Salmão</div>
+                <div class="card-desc">Tradicional ou Hot.</div>
+                <div class="card-price">R$ 29,90</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="info">
+        <p><strong>Delivery:</strong> (22) 99818-4401</p>
+        <p><strong>Endereço:</strong> Sindicato, 370 - Natividade-RJ</p>
+        <br>
+        <small>© Isa Sushi - Todos os direitos reservados</small>
+    </div>
+
+</body>
+</html>
