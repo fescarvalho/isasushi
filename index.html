@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isa Sushi - Cardápio & Pedidos</title>
     <style>
-        /* CONFIGURAÇÕES GERAIS */
+    
         body {
             font-family: 'Helvetica', 'Arial', sans-serif;
-            background-color: #121212; /* Fundo preto */
+            background-color: #121212; 
             color: #ffffff;
             margin: 0;
             padding: 0;
@@ -16,10 +16,10 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            overflow-x: hidden; /* Evita rolagem lateral indesejada */
+            overflow-x: hidden;
         }
 
-        /* CABEÇALHO */
+      
         .header {
             text-align: center;
             padding: 30px 20px 10px;
@@ -28,8 +28,8 @@
         }
 
         h1 {
-            color: #ff0000; /* Vermelho Isa Sushi */
-            font-size: 3rem; /* Tamanho padrão */
+            color: #ff0000;
+            font-size: 3rem;
             margin: 0;
             font-style: italic;
             text-shadow: 2px 2px 4px #000;
@@ -43,14 +43,14 @@
             padding: 0 10px;
         }
 
-        /* BOTÕES DE AÇÃO */
+
         .action-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
             margin: 20px 0 30px;
-            width: 90%; /* Ocupa 90% da tela no celular */
-            max-width: 400px; /* Não fica gigante no PC */
+            width: 90%; 
+            max-width: 400px;
             align-items: center;
         }
 
@@ -61,7 +61,7 @@
             font-weight: bold;
             border-radius: 50px;
             text-align: center;
-            width: 100%; /* Botão preenche a largura do container */
+            width: 100%;
             box-sizing: border-box;
             transition: transform 0.2s;
             display: flex;
@@ -72,24 +72,24 @@
         }
 
         .btn:active {
-            transform: scale(0.98); /* Efeito de clique no celular */
+            transform: scale(0.98); 
         }
 
-        /* Botão WhatsApp (Verde) */
+        
         .btn-whatsapp {
             background-color: #25D366;
             color: white;
             border: none;
         }
 
-        /* Botão Download (Borda Vermelha) */
+
         .btn-download {
             background-color: transparent;
             border: 2px solid #ff0000;
             color: #ff0000;
         }
 
-        /* DESTAQUES (GRID RESPONSIVO) */
+   
         h2 {
             text-align: center; 
             color: #fff; 
@@ -100,12 +100,12 @@
     
         .destaques-container {
             display: flex;
-            flex-wrap: wrap; /* Permite que os itens "quebrem" linha */
+            flex-wrap: wrap; 
             justify-content: center;
             gap: 20px;
             width: 100%;
             max-width: 1000px;
-            padding: 0 15px 30px; /* Padding lateral para celular */
+            padding: 0 15px 30px;
             box-sizing: border-box;
         }
 
@@ -113,8 +113,8 @@
             background-color: #1e1e1e;
             border: 1px solid #333;
             border-radius: 15px;
-            width: 100%; /* No celular ocupa a largura total */
-            max-width: 320px; /* Trava a largura máxima */
+            width: 100%; 
+            max-width: 320px; 
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0,0,0,0.5);
         }
@@ -149,7 +149,7 @@
             color: #fff;
         }
 
-        /* RODAPÉ */
+     
         .info {
             background-color: #0a0a0a;
             width: 100%;
@@ -161,19 +161,19 @@
             box-sizing: border-box;
         }
 
-        /* AJUSTES ESPECÍFICOS PARA TELAS PEQUENAS (MOBILE) */
+    
         @media (max-width: 600px) {
             h1 {
-                font-size: 2.5rem; /* Título um pouco menor */
+                font-size: 2.5rem; 
             }
             
             .btn {
-                font-size: 1rem; /* Texto do botão ajustado */
+                font-size: 1rem; 
                 padding: 16px;
             }
 
             .card {
-                max-width: 100%; /* Card ocupa toda a largura disponível */
+                max-width: 100%;
             }
         }
     </style>
