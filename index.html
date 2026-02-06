@@ -57,7 +57,6 @@
         .subtitle {
             color: #080000;
             font-size: 1.2rem;
-
             padding: 0 10px;
             font-weight: 400;
             font-style: italic;
@@ -91,7 +90,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
@@ -211,6 +209,26 @@
             font-size: 0.9rem;
             box-sizing: border-box;
         }
+        
+        /* Estilos adicionados para o link do desenvolvedor */
+        .dev-credit {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .dev-credit a {
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        
+        .dev-credit a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
 
         @media (max-width: 600px) {
             .btn {
@@ -313,19 +331,15 @@
 
     <div class="info">
         <p><strong>Chef:</strong> Isabella Bazeth</p>
-        <p><strong>Natividade-RJ</p>
+        <p><strong>Natividade-RJ</strong></p>
         <br>
         <small>© Isa Sushi - Todos os direitos reservados</small>
-         <small>
-          Desenvolvido por{" "}
-          <a
-            href="https://www.linkedin.com/in/fecarvalhodev/"
-            target="_blank"
-            rel="noopener noreferrer"
-            
-          >
-            Fernando Carvalho
-          </a>
+        
+        <small class="dev-credit">
+            Desenvolvido por 
+            <a href="https://www.linkedin.com/in/fecarvalhodev/" target="_blank" rel="noopener noreferrer">
+                Fernando Carvalho
+            </a>
         </small>
     </div>
 
